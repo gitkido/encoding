@@ -28,4 +28,11 @@ public interface CharacterSet {
      * @return コードポイントに対応する文字（対応がない場合は�(U+FFFD)）
      */
     String getChar(List<Byte> bytes);
+
+    /**
+     * コード値取得
+     * @param character 文字
+     * @return 文字に対応するコード値（対応がない場合はnull）
+     */
+    List<Byte> getCode(String character);
 }

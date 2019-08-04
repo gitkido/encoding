@@ -33,6 +33,17 @@ abstract class AbstractCharSet implements CharacterSet {
         }
     }
 
+    @Override
+    public List<Byte> getCode(String character) {
+        // charsから逆引き
+        for (Map.Entry<List<Byte>, String> entry : chars.entrySet()) {
+            if (entry.getValue().equals(character)) {
+                return entry.getKey();
+            }
+        }
+        return null;
+    }
+
     /**
      * ラッパーメソッド
      * usage: getChar(0b00010001); getChar(0x11);

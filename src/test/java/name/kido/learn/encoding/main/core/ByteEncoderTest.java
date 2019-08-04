@@ -9,28 +9,25 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class ByteDecoderTest {
+public class ByteEncoderTest {
 
-    ByteDecoder sut = new ByteDecoder();
+    ByteEncoder sut = new ByteEncoder();
 
     @Test
-    public void ASCIIの1文字をデコードできる() {
+    public void ASCIIの1文字をエンコードできる() {
 
-        String expected = "A";
+        List<Byte> expected = Arrays.asList((byte)0b01000001);
 
-        List<Byte> bytes = Arrays.asList((byte)0b01000001);
-        String actual = sut.decode(bytes, Encodings.ASCII);
+        List<Byte> actual = sut.encode("A", Encodings.ASCII);
 
         assertThat(actual, is(expected));
 
     }
 
     @Test
-    public void ASCIIの文字列をデコードできる() {
+    public void ASCIIの文字列をエンコードできる() {
 
-        String expected = "Hello World!";
-
-        List<Byte> bytes = Arrays.asList(
+        List<Byte> expected = Arrays.asList(
                 (byte)0x48, // H
                 (byte)0x65, // e
                 (byte)0x6c, // l
@@ -44,9 +41,11 @@ public class ByteDecoderTest {
                 (byte)0x64, // d
                 (byte)0x21 // !
         );
-        String actual = sut.decode(bytes, Encodings.ASCII);
+
+        List<Byte> actual = sut.encode("Hello World!", Encodings.ASCII);
 
         assertThat(actual, is(expected));
 
     }
+
 }
