@@ -4,6 +4,7 @@ import name.kido.learn.encoding.main.enums.CharSets;
 import name.kido.learn.encoding.main.enums.Encodings;
 import name.kido.learn.encoding.main.interfaces.CharacterEncoding;
 
+import java.util.List;
 import java.util.function.Function;
 
 /**
@@ -17,18 +18,18 @@ public class Shift_JIS implements CharacterEncoding {
     }
 
     @Override
-    public CharSets[] getCharSet() {
+    public CharSets[] getTargetCharSet() {
         return new CharSets[]{ CharSets.JIS_X_0201, CharSets.JIS_X_0208 };
     }
 
     @Override
-    public Function<char[], byte[]> getEncoder() {
+    public Function<String, List<Byte>> getEncoder() {
         //TODO: エンコード処理
         return null;
     }
 
     @Override
-    public Function<byte[], char[]> getDecoder() {
+    public Function<List<Byte>, String> getDecoder() {
         //TODO: エンコード処理
         return null;
     }

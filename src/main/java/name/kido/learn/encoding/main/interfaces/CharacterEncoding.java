@@ -3,6 +3,7 @@ package name.kido.learn.encoding.main.interfaces;
 import name.kido.learn.encoding.main.enums.CharSets;
 import name.kido.learn.encoding.main.enums.Encodings;
 
+import java.util.List;
 import java.util.function.Function;
 
 /**
@@ -21,18 +22,18 @@ public interface CharacterEncoding {
      *     符号化方式が使用する文字集合の列挙子を取得する。
      * @return 文字集合（列挙型）
      */
-    CharSets[] getCharSet();
+    CharSets[] getTargetCharSet();
 
     /**
      * エンコーダ取得
      * @return エンコーダ関数
      */
-    Function<char[], byte[]> getEncoder();
+    Function<String, List<Byte>> getEncoder();
 
     /**
      * デコーダ取得
      * @return デコーダ関数
      */
-    Function<byte[], char[]> getDecoder();
+    Function<List<Byte>, String> getDecoder();
 
 }

@@ -39,7 +39,7 @@ abstract class AbstractCharSet implements CharacterSet {
      * @param bytes 符号
      * @return 符号に対応する文字
      */
-    String getChar(int... bytes) {
+    public String getChar(int... bytes) {
         List<Byte> byteArray = new ArrayList<>();
         for (int byteCode : bytes) {
             byteArray.add((byte)byteCode);

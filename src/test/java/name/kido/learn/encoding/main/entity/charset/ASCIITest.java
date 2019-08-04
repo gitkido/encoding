@@ -7,7 +7,7 @@ import org.junit.Test;
 public class ASCIITest {
 
     @Test
-    public void decodeBin() {
+    public void 文字を2進数指定で取得できる() {
 
         String expected = "A";
         ASCII sut = new ASCII();
@@ -16,7 +16,7 @@ public class ASCIITest {
     }
 
     @Test
-    public void decodeHex() {
+    public void 文字を16進数指定で取得できる() {
 
         String expected = "A";
         ASCII sut = new ASCII();
