@@ -3,7 +3,7 @@ package name.kido.learn.encoding.main.core;
 import name.kido.learn.encoding.main.enums.Encodings;
 import java.util.List;
 
-public class ByteDecoder {
+public class CharacterDecoder {
 
     /**
      * デコード<BR>

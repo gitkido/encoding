@@ -9,9 +9,9 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class ByteDecoderTest {
+public class CharacterDecoderTest {
 
-    ByteDecoder sut = new ByteDecoder();
+    CharacterDecoder sut = new CharacterDecoder();
 
     @Test
     public void ASCIIの1文字をデコードできる() {

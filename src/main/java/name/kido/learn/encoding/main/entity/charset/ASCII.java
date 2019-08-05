@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class ASCII extends AbstractCharSet {
 
+    // TODO: べたがきいくない
     final String charList = "src/main/resources/charset/ASCII.txt";
 
     @Override

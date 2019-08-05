@@ -4,7 +4,7 @@ import name.kido.learn.encoding.main.enums.Encodings;
 
 import java.util.List;
 
-public class ByteEncoder {
+public class CharacterEncoder {
 
     /**
      * エンコード<BR>
