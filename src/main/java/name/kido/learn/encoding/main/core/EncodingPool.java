@@ -1,16 +1,18 @@
 package name.kido.learn.encoding.main.core;
 
-import name.kido.learn.encoding.main.entity.encoding.ASCII;
 import name.kido.learn.encoding.main.enums.Encodings;
 import name.kido.learn.encoding.main.interfaces.CharacterEncoding;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
 public class EncodingPool {
+
+    //TODO: べたがきいくない
+    // クラス一覧
+    protected  final String DEF_FILE = "/di/classes_encoding.txt";
 
     // シングルトン
     private static EncodingPool instance = new EncodingPool();
@@ -23,7 +25,7 @@ public class EncodingPool {
     // お手製DI！
     private EncodingPool () {
 
-        try (BufferedReader br = new BufferedReader(new FileReader(new File("src/main/resources/di/classes_encoding.txt")))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader((EncodingPool.class.getResourceAsStream(DEF_FILE))))) {
 
             String line;
             while ((line = br.readLine()) != null) {

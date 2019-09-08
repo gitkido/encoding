@@ -5,6 +5,7 @@ import name.kido.learn.encoding.main.enums.CharSets;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
 public class ASCII extends AbstractCharSet {
 
     // TODO: べたがきいくない
-    final String charList = "src/main/resources/charset/ASCII.txt";
+    protected final String DEF_FILE = "/charset/ASCII.txt";
 
     @Override
     public CharSets getName() {
@@ -24,7 +25,7 @@ public class ASCII extends AbstractCharSet {
 
     public ASCII () {
         // 外部定義ファイルから文字一覧を読み込む
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File(charList)))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(ASCII.class.getResourceAsStream(DEF_FILE)))) {
 
             // 符号表初期化
             chars = new HashMap<>();

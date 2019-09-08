@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="encoding:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/encoding_jar</output-path>
+    <root id="archive" name="encoding.jar">
+      <element id="module-output" name="encoding" />
+      <element id="module-source" name="encoding" />
+    </root>
+  </artifact>
+</component>
