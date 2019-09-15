@@ -41,7 +41,7 @@ abstract class AbstractCharSet implements CharacterSet {
                 return entry.getKey();
             }
         }
-        return null;
+        throw new IllegalArgumentException("解釈できないバイト列です");
     }
 
     /**

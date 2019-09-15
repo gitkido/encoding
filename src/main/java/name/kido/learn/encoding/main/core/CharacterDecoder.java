@@ -1,6 +1,8 @@
 package name.kido.learn.encoding.main.core;
 
 import name.kido.learn.encoding.main.enums.Encodings;
+import name.kido.learn.encoding.main.ui.entity.SubCommand;
+
 import java.util.List;
 
 public class CharacterDecoder {
@@ -10,7 +12,7 @@ public class CharacterDecoder {
      * @return コマンド名
      */
     public String getCommandName() {
-        return "decode";
+        return SubCommand.DECODE.getName();
     }
 
     /**

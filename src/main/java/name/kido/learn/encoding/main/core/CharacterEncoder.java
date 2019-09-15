@@ -1,6 +1,7 @@
 package name.kido.learn.encoding.main.core;
 
     import name.kido.learn.encoding.main.enums.Encodings;
+    import name.kido.learn.encoding.main.ui.entity.SubCommand;
 
     import java.util.List;
 
@@ -11,7 +12,7 @@ package name.kido.learn.encoding.main.core;
      * @return コマンド名
      */
     public String getCommandName() {
-        return "encode";
+        return SubCommand.ENCODE.getName();
     }
 
     /**
